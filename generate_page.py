@@ -1,0 +1,20 @@
+from datetime import datetime
+
+html_content = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python DevOps Web Output</title>
+</head>
+<body>
+    <h1>🚀 Python DevOps Automation</h1>
+    <p>This page was generated automatically.</p>
+    <p><b>Last updated:</b> {datetime.now()}</p>
+</body>
+</html>
+"""
+
+with open("index.html", "w") as file:
+    file.write(html_content)
+
+print("Web page generated successfully")
