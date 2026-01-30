@@ -1,0 +1,32 @@
+name: Python Web DevOps CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Generate Web Page
+      run: python generate_page.py
+
+    - name: Commit generated HTML
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add index.html
+        git commit -m "Auto-generate web page" || echo "No changes"
+        git push
