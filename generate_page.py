@@ -1,4 +1,4 @@
-from datetime import datetime idvivd
+from datetime import datetime 
 
 html_content = f"""
 <!DOCTYPE html>
@@ -9,6 +9,7 @@ html_content = f"""
 <body>
     <h1>🚀 Python DevOps Automation</h1>
     <h3> hello Ganesh <h3>
+    <h3> hello Keerthana <h3>
     <p>This page was generated automatically.</p>
     <p><b>Last updated:</b> {datetime.now()}</p>
 </body>
