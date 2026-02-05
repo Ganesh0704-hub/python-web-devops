@@ -10,6 +10,8 @@ html_content = f"""
     <h1>🚀 Python DevOps Automation</h1>
     <h3> hello Ganesh <h3>
     <h3> hello Keerthana <h3>
+    <h3> hello sanjeet <h3>
+    
     <p>This page was generated automatically.</p>
     <p><b>Last updated:</b> {datetime.now()}</p>
 </body>
